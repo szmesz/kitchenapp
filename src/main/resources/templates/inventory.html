@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Kitchen App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1 th:text="${inventoryTitle}"></h1>
+    <table>
+        <tr th:each="record: ${inventory}">
+            <td th:text="${record.name}"></td>
+            <td th:text="${record.quantity}"></td>
+            <td th:text="${record.unit}"></td>
+        </tr>
+    </table>
+</body>
+</html>
