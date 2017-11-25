@@ -6,12 +6,20 @@
 </head>
 <body>
     <h1 th:text="${inventoryTitle}"></h1>
-    <table>
-        <tr th:each="record: ${inventory}">
-            <td th:text="${record.name}"></td>
-            <td th:text="${record.quantity}"></td>
-            <td th:text="${record.unit}"></td>
-        </tr>
-    </table>
+    <form id="inventoryForm">
+    	<table>
+        	<tr th:each="record: ${inventory}">
+            	<td th:text="${record.name}"></td>
+            	<td th:text="${record.quantity}"></td>
+            	<td th:text="${record.unit}"></td>
+        	</tr>
+    	</table >
+    	<button type="reset">Reset</button>
+    </form> 
+    <script>
+	function myFunction() {
+    document.getElementByName("inventoryForm").reset();
+	}
+	</script>
 </body>
 </html>

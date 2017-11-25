@@ -5,8 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-  	<form id="addIngredientForm"> 
-		 <label>Ingredient:</label> <input name="name" type="input" />
-	</form>
+  	<form action="#" th:action="@{/addingredient}" th:object="${ingredient}" method="get">
+    	<p>Ingredient name: <input type="text" th:field="*{name}" /></p>
+        <p>quantity: <input type="text" th:field="*{quantity}" /> </p>
+        <p>unit: <input type="text" th:field="*{unit}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form> 
 </body>
 </html>

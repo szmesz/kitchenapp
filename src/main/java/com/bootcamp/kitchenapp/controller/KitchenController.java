@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.bootcamp.kitchenapp.model.Ingredient;
 import com.bootcamp.kitchenapp.service.KitchenService;
@@ -26,8 +27,8 @@ public class KitchenController {
 	}
 
 	@GetMapping(value ="/addingredient")
-	public String addIngredient(Model model) {
-		kitchenService.addIngredient(new Ingredient("sugar", 2f, "kg"));
+	public String addIngredient(@ModelAttribute Ingredient ingredient) {
+		kitchenService.addIngredient(ingredient);
 		return "addIngredient";
 	}
 }
