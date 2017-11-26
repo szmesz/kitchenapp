@@ -20,15 +20,27 @@ public class KitchenController {
 	}
 
 	@GetMapping(value = "/inventory")
-	public String getInventory(Model model) {
+	public String getInventory(Model model, Ingredient inventory) {
 		model.addAttribute("inventoryTitle", "This is what you have at home");
-		model.addAttribute("inventory", kitchenService.getInventory());
-		return "inventory";
+		if (inventory.getName() != "" && inventory.getQuantity() != 0 && inventory.getUnit() != "") {
+			model.addAttribute("inventory", kitchenService.getInventory());
+			return "inventory";
+		}else {
+			return null;
+		}
 	}
 
-	@GetMapping(value ="/addingredient")
+	@GetMapping(value = "/addingredient")
 	public String addIngredient(@ModelAttribute Ingredient ingredient) {
 		kitchenService.addIngredient(ingredient);
 		return "addIngredient";
 	}
+
+	/*
+	 * @GetMapping(value ="/name") public Ingredient getIngredientByName(Model
+	 * model, @RequestParam(value = "name") String name) {
+	 * model.addAttribute("inventory", kitchenService.getIngredientByName(name));
+	 * return "inventory"; }
+	 */
+
 }

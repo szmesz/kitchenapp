@@ -22,10 +22,10 @@ public class KitchenService {
 		return kitchenDao.getInventory();
 	}
 
-	public String getIngredientByName(String name) {
+	/*public String getIngredientByName(String name) {
 		return kitchenDao.getIngredientByName(name);
 
-	}
+	}*/
 
 	public void addIngredient(Ingredient ingredient) {
 		kitchenDao.addIngredient(ingredient);

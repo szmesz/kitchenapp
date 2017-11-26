@@ -4,6 +4,11 @@
     <title>Kitchen App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<nav>
+	<div class="button">
+		<a href="/inventory.html">The list of your ingredients at home</a>
+	</div>
+</nav>
 <body>
   	<form action="#" th:action="@{/addingredient}" th:object="${ingredient}" method="get">
     	<p>Ingredient name: <input type="text" th:field="*{name}" /></p>

@@ -23,10 +23,11 @@ public class KitchenDao {
 		return ingredients;
 	}
 
-	public String getIngredientByName(String name) {
-		return name;
+	/*public Ingredient getIngredientByName(String name) {
+		//TODO 
+		return ingredient;
 
-	}
+	}*/
 
 	public void addIngredient(Ingredient ingredient) {
 		kitchenRepository.save(ingredient);
