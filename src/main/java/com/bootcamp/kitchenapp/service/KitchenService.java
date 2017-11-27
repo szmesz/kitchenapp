@@ -22,13 +22,19 @@ public class KitchenService {
 		return kitchenDao.getInventory();
 	}
 
-	/*public String getIngredientByName(String name) {
-		return kitchenDao.getIngredientByName(name);
-
-	}*/
-
 	public void addIngredient(Ingredient ingredient) {
-		kitchenDao.addIngredient(ingredient);
+		Ingredient ingredientInDB = kitchenDao.getIngredientByName(ingredient.getName());
+		if (ingredientInDB == null || ingredientInDB.getName().equals("")) {
+			kitchenDao.addIngredient(ingredient);
+		} else {
+			float oldQuantity = ingredientInDB.getQuantity();
+			float newQuantity = ingredient.getQuantity();
+			long id = ingredientInDB.getId();
+			Ingredient updatedIngredient = new Ingredient(ingredientInDB.getName(), oldQuantity + newQuantity,
+					ingredientInDB.getUnit());
+			updatedIngredient.setId(id);
+			kitchenDao.addIngredient(updatedIngredient);
+		}
 
 	}
 }

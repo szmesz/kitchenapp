@@ -3,18 +3,18 @@
 <head>
     <title>Kitchen App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"  
+      href="../static/css/addIngredient.css" th:href="@{/css/addIngredient.css}" />
 </head>
-<nav>
-	<div class="button">
-		<a href="/inventory.html">The list of your ingredients at home</a>
-	</div>
-</nav>
 <body>
   	<form action="#" th:action="@{/addingredient}" th:object="${ingredient}" method="get">
     	<p>Ingredient name: <input type="text" th:field="*{name}" /></p>
         <p>quantity: <input type="text" th:field="*{quantity}" /> </p>
         <p>unit: <input type="text" th:field="*{unit}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        <p><button type="submit">Submit</button> <button type="reset">Reset</button></p>
     </form> 
+    <div class="button">
+		<a th:href="@{/inventory.html}">The list of your ingredients at home</a>
+	</div>
 </body>
 </html>

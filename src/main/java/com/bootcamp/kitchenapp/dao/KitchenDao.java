@@ -23,14 +23,13 @@ public class KitchenDao {
 		return ingredients;
 	}
 
-	/*public Ingredient getIngredientByName(String name) {
-		//TODO 
-		return ingredient;
-
-	}*/
-
 	public void addIngredient(Ingredient ingredient) {
 		kitchenRepository.save(ingredient);
+	}
+	
+	public Ingredient getIngredientByName(String name) {
+		return kitchenRepository.findByName(name);
+		
 	}
 
 }

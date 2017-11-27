@@ -1,15 +1,17 @@
 @charset "ISO-8859-1";
 
-html, body{
-  height: 100%;
+html, body {
+	height: 100%;
 }
+
 * {
 	box-sizing: border-box;
 }
 
 @media only screen and (min-width: 230px) {
 	body {
-		background-image: url(https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/7/0/6/3/783607-1-eng-GB/Big-data-Exhaustive-review-pulls-together-evidence-on-food-groups-and-diet-related-disease.jpg);
+		background-image:
+			url(https://cdn.theculturetrip.com/wp-content/uploads/2016/08/10294074675_9cbbfc7465_k.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -31,11 +33,14 @@ html, body{
 		opacity: 0.56;
 		box-radius: 5px;
 	}
+	h1 {
+		color: #ffffff;
+	}
 	a:link, a:visited {
 		background-color: #808000;
 		color: white;
 		text-decoration: none;
 		text-align: center;
 	}
+	
 }
-

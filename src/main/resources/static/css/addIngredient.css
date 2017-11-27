@@ -9,7 +9,7 @@ html, body{
 
 @media only screen and (min-width: 230px) {
 	body {
-		background-image: url(https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/7/0/6/3/783607-1-eng-GB/Big-data-Exhaustive-review-pulls-together-evidence-on-food-groups-and-diet-related-disease.jpg);
+		background-image: url(http://www.cfnltd.com/wp-content/uploads/temp2.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -18,6 +18,7 @@ html, body{
 		-o-background-size: cover;
 		background-size: cover;
 	}
+	
 	.button {
 		width: 25%;
 		border: 10px;
@@ -38,4 +39,3 @@ html, body{
 		text-align: center;
 	}
 }
-

@@ -1,30 +1,26 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Kitchen App</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kitchen App</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" media="all"  
+      href="../static/css/inventory.css" th:href="@{/css/inventory.css}" />
 </head>
-<nav>
-	<div class="button">
-		<a href="/addingredient.html">List your ingredients at your kitchen</a>
-	</div>
-</nav>
 <body>
-    <h1 th:text="${inventoryTitle}"></h1>
-    <form id="inventoryForm">
-    	<table>
-        	<tr th:each="record: ${inventory}">
-            	<td th:text="${record.name}"></td>
-            	<td th:text="${record.quantity}"></td>
-            	<td th:text="${record.unit}"></td>
-        	</tr>
-    	</table >
-    	<button type="reset">Reset</button>
-    </form> 
-    <script>
-	function myFunction() {
-    document.getElementByName("inventoryForm").reset();
-	}
-	</script>
+	<h1 th:text="${inventoryTitle}"></h1>
+	<form>
+		<table>
+			<tr th:each="record: ${inventory}">
+				<td th:text="${record.name}"></td>
+				<td th:text="${record.quantity}"></td>
+				<td th:text="${record.unit}"></td>
+			</tr>
+		</table>
+	</form>
+	<div class="button">
+		<a th:href="@{/addingredient.html}">List your ingredients at your
+			kitchen</a>
+	</div>
 </body>
 </html>

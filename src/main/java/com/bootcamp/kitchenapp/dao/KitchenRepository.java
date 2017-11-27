@@ -6,6 +6,6 @@ import com.bootcamp.kitchenapp.model.Ingredient;
 
 public interface KitchenRepository extends CrudRepository<Ingredient, Long> {
 	
-	Ingredient getIngredientByName(String name);
+	Ingredient findByName(String name);
 
 }
