@@ -33,6 +33,5 @@ public class KitchenController {
 			kitchenService.addIngredient(ingredient);
 		}
 		return "addIngredient";
-	}
-
+	}	
 }

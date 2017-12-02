@@ -1,15 +1,17 @@
 @charset "ISO-8859-1";
 
-html, body{
-  height: 100%;
+html, body {
+	height: 100%;
 }
+
 * {
 	box-sizing: border-box;
 }
 
 @media only screen and (min-width: 230px) {
 	body {
-		background-image: url(https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/7/0/6/3/783607-1-eng-GB/Big-data-Exhaustive-review-pulls-together-evidence-on-food-groups-and-diet-related-disease.jpg);
+		background-image:
+			url(https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/7/0/6/3/783607-1-eng-GB/Big-data-Exhaustive-review-pulls-together-evidence-on-food-groups-and-diet-related-disease.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -18,24 +20,4 @@ html, body{
 		-o-background-size: cover;
 		background-size: cover;
 	}
-	.button {
-		width: 25%;
-		border: 10px;
-		padding: 5px;
-		font-family: sans-serif;
-		text-align: center;
-		text-decoration: none;
-		display: block;
-		font-size: 2em;
-		cursor: pointer;
-		opacity: 0.56;
-		box-radius: 5px;
-	}
-	a:link, a:visited {
-		background-color: #808000;
-		color: white;
-		text-decoration: none;
-		text-align: center;
-	}
 }
-

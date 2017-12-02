@@ -1,20 +1,33 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Kitchen App</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all"  
-      href="../static/css/addIngredient.css" th:href="@{/css/addIngredient.css}" />
+<title>Kitchen App</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/inventory.css" th:href="@{/css/inventory.css}" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
 <body>
-  	<form action="#" th:action="@{/addingredient}" th:object="${ingredient}" method="get">
-    	<p>Ingredient name: <input type="text" th:field="*{name}" /></p>
-        <p>quantity: <input type="text" th:field="*{quantity}" /> </p>
-        <p>unit: <input type="text" th:field="*{unit}" /></p>
-        <p><button type="submit">Submit</button> <button type="reset">Reset</button></p>
-    </form> 
-    <div class="button">
-		<a th:href="@{/inventory.html}">The list of your ingredients at home</a>
+	<div><h1>You can list your ingredients here</h1></div>
+	<form action="#" th:action="@{/addingredient}"
+		th:object="${ingredient}" method="get">
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<label class="w3-black w3-text-white w3-opacity w3-round">Ingredient name:</label> <input class="w3-input w3-border" type="text" th:field="*{name}" /> 
+				<label class="w3-black w3-text-white w3-opacity w3-round">quantity:</label> <input class="w3-input w3-border" type="text" th:field="*{quantity}" /> 
+				<label class="w3-black w3-text-white w3-opacity w3-round">unit:</label> <input class="w3-input w3-border" type="text" th:field="*{unit}" />
+				<p>
+					<button class="w3-btn w3-black w3-hover-green w3-round-large" type="submit">Submit</button>
+					<button class="w3-btn w3-black w3-hover-green w3-round-large" type="reset">Reset</button>
+				</p>
+			</div>
+		</div>
+	</form>
+	<div class="button">
+		<a class="w3-bar-item w3-black w3-btn w3-hover-green w3-round-large" th:href="@{/inventory.html}">The list of your ingredients at
+			home</a>
+		<a class="w3-bar-item w3-black w3-btn w3-hover-green w3-round-large" th:href="@{/index.html}">Home</a>
 	</div>
 </body>
 </html>

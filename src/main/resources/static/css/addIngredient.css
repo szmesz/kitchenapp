@@ -18,19 +18,8 @@ html, body{
 		-o-background-size: cover;
 		background-size: cover;
 	}
-	
-	.button {
-		width: 25%;
-		border: 10px;
-		padding: 5px;
-		font-family: sans-serif;
-		text-align: center;
-		text-decoration: none;
-		display: block;
-		font-size: 2em;
-		cursor: pointer;
-		opacity: 0.56;
-		box-radius: 5px;
+	h1{
+	color: white;
 	}
 	a:link, a:visited {
 		background-color: #808000;

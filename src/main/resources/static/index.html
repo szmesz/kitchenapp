@@ -1,21 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
 <head>
-<title>Kitchen Application</title>
-<meta charset="UTF-8">
-
+<title>Kitchen App</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <link rel="stylesheet" type="text/css" href="/css/main.css">
-
 </head>
 <body>
-	<nav>
-		<div class="button">
-			<a href="/addingredient.html">List the ingredients at your kitchen</a>
-		</div>
-		<div class="button">
-			<a href="/inventory.html">The list of your ingredients at home</a>
-		</div>
-	</nav>
-	<article></article>
+	<div class="w3-container w3-dark-grey">
+		<h1>My Kitchen</h1>
+	</div>
+	<div class="w3-container"></div>
+	<div class="w3-sidebar w3-bar-block w3-animate-left w3-blue-grey" style="display: none; z-index: 6" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close
+			&times;</button>
+		<a href="/addingredient.html"
+			class="w3-bar-item w3-button w3-hover-green">List the ingredients
+			at your kitchen</a> <a href="/inventory.html"
+			class="w3-bar-item w3-button w3-hover-green">The list of your
+			ingredients at home</a>
+		 <button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-hover-green">Recipes</button>
+  		<div id="id01" class="w3-modal">
+   		<div class="w3-modal-content">
+   			<div class="w3-container w3-black">
+     			<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+   	   			<p>Coming Soon.</p>
+   	   			<p>In this section you will have the opportunity to search in all the recipes in this site.</p>
+   			</div>
+   		</div>
+  		</div>
+  		<button onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-button w3-hover-green">Food allergens</button>
+  		<div id="id02" class="w3-modal">
+   		<div class="w3-modal-content">
+   			<div class="w3-container w3-black">
+     			<span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+   	   			<p>Coming Soon.</p>
+   	   			<p>In this section you will have the opportunity to learn more about Food Allergens.</p>
+   	   			<p>There will be a collection of recipes suitable for people suffering food allergies</p>
+   			</div>
+   		</div>
+  		</div>
+  		<button onclick="document.getElementById('id03').style.display='block'" class="w3-bar-item w3-button w3-hover-green">Hints and Tips</button>
+  		<div id="id03" class="w3-modal">
+   		<div class="w3-modal-content">
+   			<div class="w3-container w3-black">
+     			<span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+   	   			<p>Coming Soon.</p>
+   	   			<p>In this section you will have the opportunity to learn some tricks to make your time in the kitchen easier</p>
+   	   			<p>There will be a collection of hints and tips like 'How to store your ingredients' or 'The best practices', etc...</p>
+   			</div>
+   		</div>
+  		</div>
+	</div>
+	<div class="w3-overlay w3-animate-opacity" onclick="w3_close() "style="cursor: pointer" id="myOverlay"></div>
+	<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+	<article class="w3-container w3-center w3-black w3-opacity w3-text-white"> 
+  		<h2>This application has multiple purposes.</h2>
+  		<p>It helps you to list all the ingredients you have at home.</p>
+  		<p>Helps you find recipes to your ingredients, so you can decrease your food wastage</p>
+  		<p>If you or your family members, friends suffering any kind of food intolerancy or allergy<br> 
+  		   you will find easy recipes</p>
+	</article>
+	<script>
+	function w3_open() {
+		document.getElementById("mySidebar").style.display = "block";
+		document.getElementById("myOverlay").style.display = "block";
+	}
+	function w3_close() {
+		document.getElementById("mySidebar").style.display = "none";
+		document.getElementById("myOverlay").style.display = "none";
+	}
+	</script>
 </body>
 </html>

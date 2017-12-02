@@ -4,13 +4,21 @@
 <head>
 <title>Kitchen App</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" media="all"  
-      href="../static/css/inventory.css" th:href="@{/css/inventory.css}" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/inventory.css" th:href="@{/css/inventory.css}" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
 <body>
-	<h1 th:text="${inventoryTitle}"></h1>
+	<h1 th:text="${inventoryTitle}" ></h1>
 	<form>
-		<table>
+		<table class="w3-table-all w3-card-4 w3-opacity-min">
+			<thead>
+				<tr>
+					<th>Ingredient Name</th>
+					<th>quantity</th>
+					<th>unit</th>
+				</tr>
+			</thead>
 			<tr th:each="record: ${inventory}">
 				<td th:text="${record.name}"></td>
 				<td th:text="${record.quantity}"></td>
@@ -19,8 +27,19 @@
 		</table>
 	</form>
 	<div class="button">
-		<a th:href="@{/addingredient.html}">List your ingredients at your
+		<a class="w3-bar-item w3-black w3-btn w3-hover-green w3-round-large" th:href="@{/addingredient.html}">List your ingredients at your
 			kitchen</a>
+		<a class="w3-bar-item w3-black w3-btn w3-hover-green w3-round-large" th:href="@{/index.html}">Home</a>
+	</div>
+	<div class="w3-center w3-bottom">
+		<div class="w3-bar w3-white w3-round w3-opacity-min">
+  			<a href="#" class="w3-button">&laquo;</a>
+  			<a href="#" class="w3-button">1</a>
+  			<a href="#" class="w3-button">2</a>
+  			<a href="#" class="w3-button">3</a>
+  			<a href="#" class="w3-button">4</a>
+  			<a href="#" class="w3-button">&raquo;</a>
+  		</div>
 	</div>
 </body>
 </html>
