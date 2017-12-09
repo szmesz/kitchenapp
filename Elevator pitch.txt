@@ -1,0 +1,19 @@
+Elevator Pitch
+
+For any ordinary User
+who buys and stores food at home
+the 'Kitchen App'
+is a web application
+which enables to list any ingredients stored at home.
+
+Unlike the current situation of producing food wastage beacause of the lack of information about the quantity of ingredients at home
+our product will help to handle the 'stock-control' at any home
+provides better overview of your ingredients at home 
+in this way helps to reduce food wastage caused by overconsuming.
+
+(Later this application will broaden with useful functions, like matching your ingredients to recepies,
+list and store your own recepies,
+helps to sort ingredients according to food allergens, 
+gives hints and tips to make your time spend in your kitchen easier and more pleasant)
+
+  
